@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TvShow Detail</title>
+</head>
+<body>
+<center>
+    <h1> Название фильма <br>{{show_id.title}}</h1>
+   <p> Описание фильма: <br>{{show_id.description}}</p>
+   <img src="{{show_id.image.url}}" alt="" width="400" height="300">
+   <p> колличество серии: <br>{{show_id.quantity}}</p>
+   <p> жанр:<br>{{show_id.genre}}</p>
+   <p> видео:<br>
+   <p>
+   <iframe src="{{show_id.video}}" frameborder="0"></iframe></p>
+   <p> Цена: <br>{{show_id.price}} </p>
+</center>
+</body>
+</html>

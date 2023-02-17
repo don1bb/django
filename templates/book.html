@@ -8,12 +8,14 @@
 <div>
     <ul>
         {% for i in book %}
+
         <li>
-            <h2>{{i.title}}</h2>
-            <p>{{i.description}}</p>
-            <img src="{{i.image.url}}" alt="" width="600" height="400">
-            <p>{{i.created_date}}</p>
-        </li>
+        <h1>Название книги: {{i.title}} </h1>
+        <p>Жанр: {{i.genre}}</p>
+        <p>Цена: {{i.prise}} сом </p>
+        <button><a href="/book/{{i.id}}">Подробнее</a></button>
+    </li>
+
 
         {% endfor %}
     </ul>
