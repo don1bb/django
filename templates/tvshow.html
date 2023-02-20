@@ -1,8 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>TvShow</title>
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2535/2535543.png">
+  <!---  --->
 </head>
 <body>
 <div>
@@ -11,7 +14,7 @@
   {% for i in show %}
 
     <li>
-      <h1>Название фильма: {{i.title}} </h1>
+      <h3>Название фильма: {{i.title}} </h3>
       <p>Жанр: {{i.genre}}</p>
       <p>Цена: {{i.prise}} сом </p>
       <button><a href="/tvshow/{{i.id}}">Подробнее</a></button>

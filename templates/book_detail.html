@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Book</title>
-</head>
-<body>
+{% include 'header.html'%}
 <center>
     <h1> Название книги <br>{{book_id.title}}</h1>
-   <p> Описание книги: <br>{{book_id..description}}</p>
+   <p> Описание книги: <br>{{book_id.description}}</p>
    <img src="{{book_id.image.url}}" alt="" width="400" height="300">
    <p> колличество книг: <br>{{book_id.quantity}}</p>
-   <p> жанр:<br>{{show_id.genre}}</p>
+   <p> жанр:<br>{{book_id.genre}}</p>
    <p> видео:<br>
    <p>
    <iframe src="{{book_id.video}}" frameborder="0"></iframe></p>
-   <p> Цена: <br>{{show_id.price}} </p>
+   <p> Цена: <br>{{book_id.prise}} сом </p>
 
 </center>
 
-</body>
-</html>
+{% include 'footer.html'%}

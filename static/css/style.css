@@ -1,0 +1,23 @@
+body{
+    background: url('https://rozabox.com/wp-content/uploads/2019/01/man-5846064_1920-735x400.jpg');
+}
+footer {
+  display: block;
+    text-align: center;
+  padding: 3px;
+  background-color: darkolivegreen;
+  color: white;
+}
+
+/*hr*/
+ hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    color: blue; /* Цвет линии для остальных браузеров */
+    background-color: blue; /* Цвет линии для браузера Firefox и Opera */
+    height: 10px; /* Толщина линии */
+   }
+
+
+body {
+    color: mediumaquamarine;
+}
