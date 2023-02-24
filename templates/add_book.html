@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+</head>
+<body>
+<center>
+  <h1>Добавить новый фильм</h1>
+
+  <form action="/add-book/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+<!--     <input type="submit" value="Добавить фильм в базу данных">&ndash;&gt;-->
+        <button type="submit">Добавить фильм в базу данных</button>
+
+  </form>
+
+</center>
+</body>
+</html>
+

@@ -1,27 +1,49 @@
-{% load static %}
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>TvShow</title>-->
+<!--  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2535/2535543.png">-->
+<!--  &lt;!&ndash;-  -&ndash;&gt;-->
+<!--</head>-->
+<!--<body>-->
+<!--<div>-->
+<!--  <button><a href="http://127.0.0.1:8000/admin/">В панель управления</a></button>-->
+<!--  <ul>-->
+<!--  {% for i in show %}-->
+
+<!--    <li>-->
+<!--      <h3>Название фильма: {{i.title}} </h3>-->
+<!--      <p>Жанр: {{i.genre}}</p>-->
+<!--      <p>Цена: {{i.prise}} сом </p>-->
+<!--      <button><a href="/tvshow/{{i.id}}">Подробнее</a></button>-->
+<!--    </li>-->
+
+<!--    {% endfor %}-->
+<!--  </ul>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TvShow</title>
-  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2535/2535543.png">
-  <!---  --->
+    <title>Update</title>
 </head>
 <body>
-<div>
-  <button><a href="http://127.0.0.1:8000/admin/">В панель управления</a></button>
-  <ul>
-  {% for i in show %}
+<center>
+  <h1>Изменить данные о фильме</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{forms.as_p}}
+    <input type="submit" value="изменить данные о базе">
+  </form>
+</center>
 
-    <li>
-      <h3>Название фильма: {{i.title}} </h3>
-      <p>Жанр: {{i.genre}}</p>
-      <p>Цена: {{i.prise}} сом </p>
-      <button><a href="/tvshow/{{i.id}}">Подробнее</a></button>
-    </li>
-
-    {% endfor %}
-  </ul>
-</div>
 </body>
 </html>
+
