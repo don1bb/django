@@ -2,24 +2,40 @@
 <center>
     <br>
     <hr>
-    <img src="{{book_id.image.url}}" alt="" width="400" height="300">
+    <img src="{{object.image.url}}" alt="" width="400" height="300">
      <br>
     <hr>
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{book_id.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{book_id.quantity}}</h6>
-      <h6 class="card-subtitle mb-2 text-muted">{{book_id.prise}}сом</h6>
-    <p class="card-text">{{book_id.description}}</p>
-    <p href="#" class="card-link">{{book_id.genre}}</p>
-      <button><a href="/book/{{book_id.id}}/update">Изменить данные</a></button>
-      <button><a href="/book/{{book_id.id}}/delete">Удалить фильм</a></button>
+    <h5 class="card-title">{{object.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{object.quantity}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{object.prise}}сом</h6>
+    <p class="card-text">{{object.description}}</p>
+    <p href="#" class="card-link">{{object.genre}}</p>
+      <button><a href="/book/{{object.id}}/update">Изменить данные</a></button>
+      <button><a href="/book/{{object.id}}/delete">Удалить фильм</a></button>
   </div>
 </div>
     <br>
     <hr>
-    <iframe src="{{book_id.video}}" frameborder="0" width="640" height="420"></iframe>
+    <iframe src="{{object.video}}" frameborder="0" width="640" height="420"></iframe>
 </center>
->
+<form action="/add-comment/" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="add">
+
+    </form>
+
+    <table border="2">
+        <tr>
+            <th>Дата рейтинга</th> <th>Оценка</th>
+        </tr>
+        {% for j in object.comment_object.all %}
+        <tr>
+            <td><h3>{{j.created_date}}</h3></td> <td><h3>&nbsp;&nbsp;&nbsp;{{j.rate}}</h3></td>
+        </tr>
+        {% endfor %}
+    </table>
 
 {% include 'footer.html' %}
