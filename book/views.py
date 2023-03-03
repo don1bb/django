@@ -117,7 +117,7 @@ class AddRatingView(generic.CreateView):
     template_name = 'book_detail.html'
     form_class = forms.CommentForm
     queryset = models.Rating.objects.all()
-    success_url = '/book/<int:id>/'
+    success_url = '/book/'
 
     def form_valid(self, form):
         return super(AddRatingView, self).form_valid(form=form)
