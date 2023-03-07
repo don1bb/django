@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'book',
     'tv_shows',
     'parser_app',
+    'custom_user',
 ]
 
 MIDDLEWARE = [
