@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'tv_shows',
     'parser_app',
     'custom_user',
+    'product',
+    'cloth',
 ]
 
 MIDDLEWARE = [
